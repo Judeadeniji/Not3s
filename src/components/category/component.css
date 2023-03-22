@@ -1,0 +1,145 @@
+.category {
+  margin: 20px 0;
+  overflow-x: scroll;
+}
+
+.category .category-title {
+  margin: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category .category-title p {
+  color: #29f1ff;
+  font-size: 13px;
+  letter-spacing: 0.1px;
+  font-weight: 400;
+}
+
+.category .category-title h2 {
+  font-size: 24px;
+  line-height: 0;
+  font-family: "Segoe UI";
+}
+
+.underline {
+  width: 0;
+  height: 5px;
+  background-color: red;
+  transition: all 0.6s;
+  animation: underlineRev 0.5s forwards;
+}
+
+.category .category-title:hover .underline {
+  background-color: red;
+  animation: underline 0.5s forwards;
+}
+
+@keyframes underline {
+  from {
+    width: 0;
+    height: 5px;
+  }
+  to {
+    width: 100%;
+    height: 5px;
+  }
+}
+
+@keyframes underlineRev {
+  from {
+    width: 100%;
+    height: 5px;
+  }
+  to {
+    width: 0;
+    height: 5px;
+  }
+}
+
+.category .category-items {
+  display: grid;
+  grid-template-columns: repeat(25, 1fr);
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: auto;
+}
+
+.category .category-items::-webkit-scrollbar {
+  display: none;
+}
+
+.category .category-items .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 2px;
+  transition: all 0.3s ease-out;
+}
+
+.category-items .item:hover {
+  transform: translateY(-10px);
+}
+
+.category .category-items .item .image {
+  border-radius: 5px;
+  margin: auto;
+}
+
+.category .category-items .item p {
+  font-size: 15px;
+  margin: 0 3px;
+  font-weight: 500;
+  white-space: nowrap; /* prevent text from wrapping to next line */
+  overflow: hidden; /* hide overflowing text */
+  text-overflow: ellipsis; /* add ellipsis at the end of the text */
+  width: 90%; /* set a fixed width to the container element */
+
+  height: 20px;
+
+}
+.category .category-items .item p.loader {
+  
+  /* Set up the linear gradient */
+  background-image: linear-gradient(90deg, #272727, #0a0a0a);
+
+  /* Make the gradient move from left to right */
+  background-position: -100% 0;
+
+  /* Make the gradient cover the entire div */
+  background-size: 200% 100%;
+
+  /* Set up the animation */
+  animation: slide 1s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.category-items .item .image.loader {
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-color: #999;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}

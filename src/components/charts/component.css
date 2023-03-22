@@ -1,0 +1,75 @@
+
+.charts {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.charts .chart-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow-x: scroll;
+}
+
+.chart-container::-webkit-scrollbar {
+  display: none;
+}
+
+.charts .chart-container .chart-sub-container {
+  width: 330px;
+  height: 330px;
+  margin: 0 5px;
+  background-color: #ffffff47;
+  border-radius: 15px;
+  padding: 0px 12px;
+}
+
+.charts .chart-container .chart-sub-container .chart-cat-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.charts .chart-container .chart-sub-container .chart-cat-header .nav-more {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.charts .chart-container .chart-sub-container .chart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.charts .chart-container .chart-sub-container .chart-item .rank {
+  font-weight: bold;
+  font-family: "Times New Roman";
+  line-height: 0;
+}
+
+.charts .chart-container .chart-sub-container .chart-item .cover {
+  background-color: #ffffff45;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 20px;
+}
+
+.charts .chart-container .chart-sub-container .chart-item .details {
+  width: calc(100% - 130px);
+  left: 80px;
+  position: absolute;
+}
+
+.charts .chart-container .chart-sub-container .chart-item .details .title {
+  font-size: 13px;
+  line-height: 0;
+}
+
+.charts .chart-container .chart-sub-container .chart-item .details .artist {
+  font-size: 8px;
+}
