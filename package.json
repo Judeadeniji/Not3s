@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "cosmo-script start",
-    "build": "cosmo-script build"
+    "start": "brace-js-script start",
+    "build": "brace-js-script build"
   },
   "keywords": [],
   "author": "",
@@ -13,14 +13,14 @@
   "devDependencies": {
     "css-loader": "^6.7.3",
     "file-loader": "^6.2.0",
+    "jass-cli-loader": "^1.2.1",
     "postcss": "^8.4.21",
     "style-loader": "^3.3.1",
     "url-loader": "^4.1.1"
   },
   "dependencies": {
-    "brace-js": "^1.0.0",
-    "brace-js-scripts": "^1.0.1",
-    "brace-router": "^1.0.1",
-    "jass-cli-loader": "^1.2.1"
+    "brace-js": "^1.1.0",
+    "brace-js-scripts": "^1.1.2",
+    "brace-router": "^1.1.1"
   }
 }

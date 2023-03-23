@@ -12,7 +12,7 @@ const Banner = () => {
 const SlideItem = (icon, name) => div(
   {className: 'item'},
   div({}, i({className: `fa fa-${icon}`})),
-  p({}, {name})
+  p({}, name)
   )
 const Slide = () => div(
   {className: 'cat-slide'},
@@ -28,5 +28,4 @@ const Jumbotron = () => {
   return frag(Banner(), Slide())
 }
 
-console.log(SlideItem('music', 'Songs'))
 export default Jumbotron

@@ -3,7 +3,7 @@ import "./assets/css/font-awesome.min.css";
 import "./index.css";
 import { HomeComponent } from "./pages/Home";
 import { AlbumSingleComponent } from "./pages/AlbumSingle";
-import { render } from "brace-js";
+import { Mount } from "brace-js";
 import { createRouter, RouteOutlet, navigate } from "brace-router";
 
 const RoutesArray = [
@@ -25,4 +25,4 @@ const RoutesArray = [
 
 const Routes = createRouter(RoutesArray);
 
-render(RouteOutlet, document.querySelector("#root"));
+Mount(RouteOutlet, document.querySelector("#root"));
