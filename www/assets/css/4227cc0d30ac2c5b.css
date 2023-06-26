@@ -1,0 +1,74 @@
+.audio-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    background-color: black;
+    height: 50px;
+}
+.audio-player .inner-container {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: color;
+    width: 95%;
+}
+.audio-player .inner-container .track-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.audio-player .inner-container .track-details .metadata p {
+    line-height: 5px;
+}
+.audio-player .inner-container .track-details .metadata .track-title {
+    font-size: 15px;
+}
+.audio-player .inner-container .track-details .metadata .track-artist {
+    font-size: 12px;
+}
+.audio-player .inner-container .track-details .metadata {
+    margin-right: 5px;
+}
+.audio-player .inner-container .track-details .album-art {
+    background-color: #3b3d3d65;
+    height: 40px;
+    width: 40px;
+    margin: auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s linear;
+}
+.audio-player .inner-container .track-details .album-art img {
+    width: 40px;
+    height: 40px;
+}
+.audio-player .inner-container .track-details .album-art img:hover {
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+    transition: all 0.5s;
+}
+.audio-player .inner-container .track-details .album-art img:hover:before {
+    transition: all 0.5s linear;
+    content: "\f001";
+    color: white;
+    margin: auto;
+}
+.audio-player .inner-container .controls {
+    margin: auto 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.audio-player .inner-container .controls .play-pause {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: #defefe;
+    margin: auto 5px auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

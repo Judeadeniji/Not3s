@@ -1,0 +1,109 @@
+{
+  "songs": [
+    {
+      "title": "2:30",
+      "artist": "Asake",
+      "releaseDate": "2023-04-05",
+      "copyright": "Copyright © 2023 Asake. All rights reserved.",
+      "coverArt": "https://i.imgur.com/8644868.jpg"
+    },
+    {
+      "title": "Amapiano",
+      "artist": "Asake ft. Olamide",
+      "releaseDate": "2022-12-02",
+      "copyright": "Copyright © 2022 Asake, Olamide. All rights reserved.",
+      "coverArt": "https://i.imgur.com/7717737.jpg"
+    },
+    {
+      "title": "Yoga",
+      "artist": "Asake",
+      "releaseDate": "2022-11-11",
+      "copyright": "Copyright © 2022 Asake. All rights reserved.",
+      "coverArt": "https://i.imgur.com/5227227.jpg"
+    },
+    {
+      "title": "Organise",
+      "artist": "Asake",
+      "releaseDate": "2022-10-10",
+      "copyright": "Copyright © 2022 Asake. All rights reserved.",
+      "coverArt": "https://i.imgur.com/9999999.jpg"
+    },
+    {
+      "title": "Dull",
+      "artist": "Asake",
+      "releaseDate": "2022-09-09",
+      "copyright": "Copyright © 2022 Asake. All rights reserved.",
+      "coverArt": "https://i.imgur.com/4444444.jpg"
+    },
+    {
+      "title": "Sunmomi",
+      "artist": "Asake",
+      "releaseDate": "2022-08-08",
+      "copyright": "Copyright © 2022 Asake. All rights reserved.",
+      "coverArt": "https://i.imgur.com/1111111.jpg"
+    },
+    {
+      "title": "Muse",
+      "artist": "Asake",
+      "releaseDate": "2022-07-07",
+      "copyright": "Copyright © 2022 Asake. All rights reserved.",
+      "coverArt": "https://i.imgur.com/2222222.jpg"
+    },
+    {
+      "title": "Nzaza",
+      "artist": "Asake",
+      "releaseDate": "2022-06-06",
+      "copyright": "Copyright © 2022 Asake. All rights reserved.",
+      "coverArt": "https://i.imgur.com/3333333.jpg"
+    },
+    {
+      "title": "Joha",
+      "artist": "Asake",
+      "releaseDate": "2022-05-05",
+      "copyright": "Copyright © 2022 Asake. All rights reserved.",
+      "coverArt": "https://i.imgur.com/6666666.jpg"
+    },
+    {
+      "title": "Dupe",
+      "artist": "Asake",
+      "releaseDate": "2022-04-04",
+      "copyright": "Copyright © 2022 Asake. All rights reserved.",
+      "coverArt": "https://i.imgur.com/7777777.jpg"
+    },
+    {
+      "title": "Terminator",
+      "artist": "Asake",
+      "releaseDate": "2022-03-03",
+      "copyright": "Copyright © 2022 Asake. All rights reserved.",
+      "coverArt": "https://i.imgur.com/8888888.jpg"
+    },
+    {
+      "title": "Ototo",
+      "artist": "Asake",
+      "releaseDate": "2022-02-02",
+      "copyright": "Copyright © 2022 Asake. All rights reserved.",
+      "coverArt": ""
+    },
+    {
+      "title": "Peace Be Unto You",
+      "artist": "Asake",
+      "releaseDate": "2022-01-01",
+      "copyright": "Copyright © 2022 Asake. All rights reserved.",
+      "coverArt": ""
+    },
+    {
+      "title": "Sungba (Remix)",
+      "artist": "Asake ft. Burna Boy",
+      "releaseDate": "2021-12-31",
+      "copyright": "Copyright © 2021 Asake, Burna Boy. All rights reserved.",
+      "coverArt": ""
+    },
+    {
+      "title": "Body & Soul",
+      "artist": "Joeboy",
+      "releaseDate": "2022-05-20",
+      "copyright": "Copyright © 2022 Joeboy. All rights reserved",
+      "coverArt": ""
+    }
+  ]
+}

@@ -7,7 +7,7 @@ export const loader = div(
         { className: "category-title" },
         div(
           {},
-          h2({ className: "title" }, "Loading..."),
+          h2({ className: "title loader" }, ""),
           div({ className: "underline" })
         ),
         p({}, "More »")

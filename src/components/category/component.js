@@ -1,75 +1,57 @@
 import "./component.css";
-import { CSML, Data, onUpdate } from "brace-js";
+import { createData, createEffect } from "brace-js";
 import { loader } from "./loader";
-import { DeezerApi, Result } from "../../service/deezer-api";
-import { Link } from "brace-router";
+import { navigate } from "brace-js/router";
+import Songs from "../../service/songs.json";
 
-const { div, h2, p, figure, img, brFor, brRepeat } = CSML;
-const CategoryData = Data({done: false});
-let isFetching = true;
+const Item = ({ title = "Loading...", imageUrl }) => (
+  <div className="item">
+    <figure className="image">
+      <img src={imageUrl} alt={title} className="image" use:visible={({target}) => {
+        target.src = imageUrl ===
+        "http://localhost:9000/assets/images/stamina.jpg" ?
+        ("http://localhost:9000/assets/images/stamina.jpg") : imageUrl;
+          target.style.transform = "translateY(0)"
+          target.style.transition = "0.3s transform"
+        return () => {
+          target.style.transform = "translateY(15px)"
+        }
+      }} />
+    </figure>
+    <p className="title">{title}</p>
+  </div>
+);
 
-/*const fetchData = (id) => {
-  return async () => {
-    const proxyUrl = 'https://corsproxy.io/?';
-    const apiUrl = `https://api.deezer.com/chart/${id}`;
-    const response = await fetch(proxyUrl + apiUrl);
-    const data = await response.json();
-    CategoryData.value[id] = { result: data.tracks.data, done: true };
-    CategoryData.value = {...CategoryData.value, done: true}
-    isFetching = false;
-    return () => {
-    // Cleanup function;
-    console.log(CategoryData.value)
-    isFetching = false;
-    };
-  };
-};*/
+const Category = ({ id, title = "Loading..." }) => {
 
-
-
-const Item = (title = "Loading...", imageUrl) =>  div(
-    { className: "item" },
-    figure(
-      { className: "image" },
-      img({
-        src: imageUrl,
-        alt: title,
-        className: "image",
-      })
-    ),
-    p({ className: "title" }, title)
-  );
-
-const Category = (id, title = "Loading...") => {
-  if (isFetching) {
-    onUpdate(DeezerApi(`chart/${id}`), [id]).then((cleanup) => {
-     cleanup();
-     console.log(Result.value)
-    });
-
-    return loader;
-  }
-
-  return div(
-    { className: "category" },
-    div(
-      { className: "category-title" },
-      div(
-        {},
-        h2({ className: "title" }, title),
-        div({ className: "underline" })
-      ),
-      p({}, "More »")
-    ),
-    div(
-      { className: "category-items" },
-      ...brFor(CategoryData.value[id]?.done ? CategoryData.value[id]?.result : ['Loading...'] , (res) =>
-        Link( {}, `/music/${res.artist?.name}/${res?.id}`,
-Item(res?.title_short, res?.album.cover)
-        )
-      )
-    )
+  return (
+    <div className="category"  use:visible={({ target }) => {
+        target.style.opacity = 1
+        target.style.transition = "1s opacity"
+        target.style.display = "";
+      return () => {
+        target.style.opacity = 0;
+        target.style.display = "hidden";
+      }
+    }}>
+      <div className="category-title">
+        <div>
+          <h2 className="title">{title}</h2>
+          <div className="underline"></div>
+        </div>
+        <p>More »</p>
+      </div>
+      <div className="category-items">
+        {Songs ? Songs.songs.map(({ artist, title, coverArt }) => (
+              <div click$={() => navigate (`/music/${artist}/${title}`)}>
+                {<Item title={title} imageUrl={"http://localhost:9000/assets/images/stamina.jpg"} />}
+              </div>
+            ))
+          : ['Loading...'].map((text) => <p>{text}</p>)}
+      </div>
+    </div>
   );
 };
+
 
 export default Category;
